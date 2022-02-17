@@ -2,38 +2,55 @@
 <html>
 
 <head>
+    <!-- O header e um suporte navegacional que pode ter alguns elementos do cabeçalho -->
   <meta charset="UTF-8">
+  <!-- charset serve para indicar um formanto de codificacao de carecteres utilizado no documento UTF8 -->
   <title>Cardápio</title>
-
+<!-- define o titulo do documento na barra do navegador ou aba pagina -->
   <!-- Bootstrap - CSS -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <!-- È a parte onde adicionamos o CSS do Bootstrap -->
 </head>
 
 <body>
+    <!--Conteúdo do documento ficar no body  -->
   <header>
     <!-- Toolbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <!-- representa uma seção de uma pagina que aponta outras paginas -->
       <div class="container-fluid">
+           <!-- container para conteúdo de fluxo  -->
         <a class="navbar-brand" href="#">
+            <!-- class é uam lista de clases que permite  a css e javascript selecionar e acessar elementos ou funcoes com metodo DOM -->
           Coffee
           <small>Arábica</small>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <!-- esse botao e para criar uma barra de navegação button class navbar-toggler -->
           <span class="navbar-toggler-icon"></span>
+          <!--classe de inicialização -->
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
+            <!--Para agrupar a esocnder conteudos navbar,de acordo com o breakpoint do pai  -->
           <ul class="navbar-nav">
+              <!-- È para obter uma leve navegação com suporte a dropdowns   -->
             <li class="nav-item">
+                <!-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
               <a class="nav-link" href="./index.html">Home</a>
+              <!-- nav link indicar qual pagina atual pode ser aplicada -->
             </li>
             <li class="nav-item">
+                !-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
               <a class="nav-link active" aria-current="page" href="#">Cardápio</a>
+               <!-- nav link indicar qual pagina atual pode ser aplicada -->
             </li>
             <li class="nav-item">
+                <!-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
               <a class="nav-link" href="#">Sobre</a>
+              <!-- nav link indicar qual pagina atual pode ser aplicada -->
             </li>
           </ul>
         </div>
@@ -43,13 +60,15 @@
   </header>
   <main>
     <section class="my-3">
-
+<!--Marger que podem atulizar valores negativos e positivos -->
       <!-- Grid -->
       <div class="container">
+          <!--  uma pagina responsiva para navegar entre as secoes com a navbar -->
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           +
+          <!-- È um botão personalizado para acões em formuários -->
         </button>
 
         <!-- Modal -->
@@ -61,6 +80,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                  <!--Esses codigo que estar entre a linha 74 ate 82 e para quando modals são muito longos para viewport do usario ou dispositivo, eles possuem rolagem idependente da página -->
 
                 <h1>Conteúdo do modal</h1>
 
@@ -72,30 +92,38 @@
                     <input type="text" name="nome" id="nome" class="form-control">
                     <div id="nomeHelp" class="form-text">Adicione o nome do Alimento.</div>
                   </div>
+                  <!-- entre a linha 88 até a 94 fala do formulario do nome do usuario contem classes e grupos id como foddfrom também class, form-label id nome, e tambem,id nomeHelp, a class é uma lista de classes de um elemento, separada por espaços. Classes com permissão de acesso a CSS e funções de Javascript e acesso a elementos específicos através de classes ou métodos DOM, o objetivo do id é identificar o elemento ao navegar por âncoras (usando um identificador de fragmentação), ao usar scripts ou estilizando -->
 
                   <!-- Descrição -->
                   <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição</label>
                     <input type="text" name="descricao" id="descricao" class="form-control">
                   </div>
+                  <!-- da linha 98 ate a 101 a descricao e  estilizado pela a claase form-control ela possui estilos para a aparencia.--> -->
 
                   <!-- Preço -->
                   <div class="mb-3">
                     <label for="preco" class="form-label">Preço</label>
                     <input type="text" name="preco" id="preco" class="form-control">
                   </div>
+                  <!--da linha 106 ate 109 usar tambem form control para estilos de aparencia do preco etodos usar uma margen de mb-3 -->
+      
 
                   <!-- Imagem -->
                   <div class="mb-3">
                     <label for="imagem" class="form-label">Imagem</label>
                     <input type="text" name="imagem" id="imagem" class="form-control">
                   </div>
+                  <!--da linha 113 ate 116 usar tambem form control para estilos de aparencia do iamgem etodos usar uma margen de mb-3 e tambem Classes com permissão de acesso a CSS e funções de Javascript e acesso a elementos específicos através de classes ou métodos DOM, o objetivo do id é identificar o elemento ao navegar por âncoras (usando um identificador de fragmentação), ao usar scripts ou estilizando  -->
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <!--da linha 118 ate 120  Pode-se ver o cabeçalho,corpo (precisa de padding) e footer (opcional) do modal.  -->
+                    <!-- <input type="submit" value="Adicionar"> -->
 
                     <!-- <input type="submit" value="Adicionar"> -->
                     <button type="submit" class="btn btn-primary" id="adicionarFoodButton">
+                        <!--sempre ao  realizar o envio da página será recarregada sendo assim "abortando" o processo restante que seria a exibição do modal.  -->
                       Adicionar
                     </button>
                   </div>
