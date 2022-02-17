@@ -1,128 +1,135 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="UTF-8">
-  <title>Document</title>
-
+< html >
+< cabeça >
+   <!-- O header e um suporte navegacional que pode ter alguns elementos do cabeçalho -->
+  < meta  charset =" UTF-8 " >
+  <!-- charset serve para indicar um formanto de codificacao de carecteres utilizado no documento UTF8 -->
+  < title > Cardápio </ title >
+  <!-- define o titulo do documento na barra do navegador ou aba pagina -->
   <!-- Bootstrap - CSS -->
-  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilo da aplicação -->
-  <link rel="stylesheet" href="css/index.css">
-
-
-</head>
-
-<body>
-
-  <header>
-    <!-- Toolbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Coffee
-          <small>Arábica</small>
+  < link  href =" node_modules/bootstrap/dist/css/bootstrap.min.css " rel =" stylesheet " >
+  <!-- È a parte onde adicionamos o CSS do Bootstrap -->
+</ cabeça >
+< corpo >
+<!--Conteúdo do documento ficar no body  -->
+  < cabeçalho >
+    <!-- Barra de ferramentas -->
+    < nav  class =" navbar navbar-expand-lg navbar-dark bg-primary " >
+    <!-- representa uma seção de uma pagina que aponta outras paginas -->
+      < div  class =" container-fluid " >
+      <!-- container para conteúdo de fluxo  -->
+        < a  class =" navbar-brand " href =" # " >
+        <!-- class é uam lista de clases que permite  a css e javascript selecionar e acessar elementos ou funcoes com metodo DOM -->
+          Café
+          < pequeno > Arábica </ pequeno >
         </a>
+        < button  class =" navbar-toggler " type =" button " data-bs-toggle =" recolher " data-bs-target =" #navbarNav " aria-controls =" navbarNav " aria-expanded =" false " aria-label =" Alternar navegação " >
+        <!-- esse botao e para criar uma barra de navegação button class navbar-toggler -->
+          < span  class =" navbar-toggler-icon " > </ span >
+          <!--classe de inicialização -->
+        </ botão >
+        < div  class =" recolher navbar-collapse " id =" navbarNav " >
+        <!--Para agrupar a esocnder conteudos navbar,de acordo com o breakpoint do pai  -->
+          < ul  class =" navbar-nav " >
+          <!-- È para obter uma leve navegação com suporte a dropdowns   -->
+            < li  class =" nav-item " >
+            <!-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
+              < a  class =" nav-link " href =" ./index.html " > Página inicial </ a >
+              <!-- nav link indicar qual pagina atual pode ser aplicada -->
+            </ li >
+            < li  class =" nav-item " >
+            <!-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
+              < a  class =" nav-link ativo " aria-current =" page " href =" # " > Cardápio </ a >
+               <!-- nav link indicar qual pagina atual pode ser aplicada -->
+            </ li >
+            < li  class =" nav-item " >
+            <!-- Faz o conteúdo do seu nav se extender por toda largura disponivel -->
+              < a  class =" nav-link " href =" # " > Sobre </ a >
+               <!-- nav link indicar qual pagina atual pode ser aplicada -->
+            </ li >
+          </ ul >
+        </ div >
+      </ div >
+    </ nav >
+  </ cabeçalho >
+  < principal >
+    < section  class =" my-3 " >
+     <!--Marger que podem atulizar valores negativos e positivos -->
+      <!-- Grade -->
+      < classe div  =" contêiner " >
+       <!--  uma pagina responsiva para navegar entre as secoes com a navbar -->
+        <!-- Modo de disparo de botão -->
+        < button  type =" button " class =" btn btn-secondary " data-bs-toggle =" modal " data-bs-target =" #exampleModal " >
+         <!-- È um botão personalizado para acões em formuários -->
+          +
+        </ botão >
+        <!-- Modal -->
+        < div  class =" modal fade " data-bs-keyboard =" false " id =" exampleModal " tabindex =" -1 " aria-labelledby =" exampleModalLabel " aria-hidden =" true " >
+          < div  class =" modal-dialog " >
+            < div  class =" modal-conteúdo " >
+              < div  class =" modal-header " >
+                < h5  class =" modal-title " id =" exampleModalLabel " > Adicionar Item </ h5 >
+                < button  type =" button " class =" btn-close " data-bs-dismiss =" modal " aria-label =" Fechar " > </ button >
+              </ div >
+              < div  class =" modal-body " >
+               <!--Esses codigo que estar entre a linha 74 ate 82 e para quando modals são muito longos para viewport do usario ou dispositivo, eles possuem rolagem idependente da página -->
+                < h1 > Conteúdo do modal </ h1 >
+                <!-- Formulário -->
+                < form  id =" foodForm " >
+                  < div  class =" mb-3 " >
+                    <!-- Nome -->
+                    < label  for =" nome " class =" form-label " > Nome </ label >
+                    < input  type =" text " name =" nome " id =" nome " class =" form-control " >
+                    < div  id =" nomeHelp " class =" form-text " > adição o nome do Alimento. </ div >
+                  </ div >
+                  <!-- entre a linha 88 até a 94 fala do formulario do nome do usuario contem classes e grupos id como foddfrom também class, form-label id nome, e tambem,id nomeHelp, a class é uma lista de classes de um elemento, separada por espaços. Classes com permissão de acesso a CSS e funções de Javascript e acesso a elementos específicos através de classes ou métodos DOM, o objetivo do id é identificar o elemento ao navegar por âncoras (usando um identificador de fragmentação), ao usar scripts ou estilizando -->
+                  <!-- Descrição -->
+                  < div  class =" mb-3 " >
+                    < label  for =" descricao " class =" form-label " > Descrição </ label >
+                    < input  type =" text " name =" descricao " id =" descricao " class =" form-control " >
+                  </ div >
+                  
+                  <!-- da linha 98 ate a 101 a descricao e  estilizado pela a claase form-control ela possui estilos para a aparencia.--> -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./cardapio.html">Cardápio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-
-            <img src="https://images.unsplash.com/photo-1609593147714-46c546d38137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80" class="d-block w-100" alt="...">
-
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-
-            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
-
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-
-            <img src="https://images.unsplash.com/photo-1581068106017-2349c727e298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
-
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-
-            <img src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
-
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-    </section>
-
-    <section>
-      <h1>Minha aplicação com JS!</h1>
-
-      <a href="semana3_atividade1.html">Semana 3</a>
-
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptate vero voluptas quo ipsum alias repellat quibusdam ipsam asperiores laboriosam veritatis earum porro, provident sequi aspernatur nisi eius, iste odio.</p>
-    </section>
-
-  </main>
-
-  <footer></footer>
-
-
+                  <!-- Preço -->
+                  < div  class =" mb-3 " >
+                    < label  for =" preco " class =" form-label " > Preço </ label >
+                    < input  type =" text " name =" preco " id =" preco " class =" form-control " >
+                  </ div >
+                   <!--da linha 106 ate 109 usar tambem form control para estilos de aparencia do preco etodos usar uma margen de mb-3 -->
+                  <!-- Imagem -->
+                  < div  class =" mb-3 " >
+                    < label  for =" imagem " class =" form-label " > Imagem </ label >
+                    < input  type =" text " name =" imagem " id =" imagem " class =" form-control " >
+                  </ div >
+                  <!--da linha 113 ate 116 usar tambem form control para estilos de aparencia do iamgem etodos usar uma margen de mb-3 e tambem Classes com permissão de acesso a CSS e funções de Javascript e acesso a elementos específicos através de classes ou métodos DOM, o objetivo do id é identificar o elemento ao navegar por âncoras (usando um identificador de fragmentação), ao usar scripts ou estilizando  -->
+                  < div  class =" modal-rodapé " >
+                    < button  type =" button " class =" btn btn-secondary " data-bs-dismiss =" modal " > Fechar </ button >
+                    e footer (opcional) do modal.
+                    <!--da linha 118 ate 120  Pode-se ver o cabeçalho,corpo (precisa de padding) e footer (opcional) do modal.  -->
+                    <!-- <input type="submit" value="Adicionar"> -->
+                    < button  type =" submit " class =" btn btn-primary " id =" adicionarFoodButton " >
+                    
+                    <!--sempre ao  realizar o envio da página será recarregada sendo assim "abortando" o processo restante que seria a exibição do modal.  -->
+                    
+                    </ botão >
+                  </ div >
+                </ formulário >
+              </ div >
+            </ div >
+          </ div >
+        </ div >
+        <!-- Linha -->
+        < div  id =" itens-cardapio " class =" linha " >
+          <!-- Colunas-->
+          <!-- antes do fim -->
+        </ div >
+    </ seção >
+  </ principal >
+  < rodapé > </ rodapé >
+  
+  < script  src =" ./js/cardapio.js " type =" módulo " > </ script >
+  <!-- Cardápio -->
+  < script  src =" node_modules/bootstrap/dist/js/bootstrap.bundle.min.js " > </ script >
   <!-- Bootstrap - Js -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html
+</ corpo >
+</ html >
